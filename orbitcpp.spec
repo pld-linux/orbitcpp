@@ -1,16 +1,15 @@
 Summary:	C++ bindings for the ORBit Corba ORB
 Summary(pl):	Powi±zania C++ dla ORBit Corba ORB
 Name:		orbitcpp
-Version:	1.3.7
+Version:	1.3.8
 Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/%{name}/1.3/%{name}-%{version}.tar.bz2
-# Source0-md5:	14a23ca4a09a9eea7a2b42d70662d015
-Patch0:		%{name}-gcc33.patch
+# Source0-md5:	76cf5eccc039501dc854614c349e9c57
 URL:		http://orbitcpp.sourceforge.net/
-BuildRequires:	ORBit2-devel >= 2.7.6
-BuildRequires:	libIDL >= 0.7.4
+BuildRequires:	ORBit2-devel >= 2.8.2
+BuildRequires:	libIDL >= 0.8.2
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -27,8 +26,8 @@ Summary:	Header files, and utilities for orbitcpp
 Summary(pl):	Pliki nag³ówkowe i u¿ytki dla orbitcpp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	ORBit2-devel >= 2.7.6
-Requires:	libIDL-devel >= 0.7.4
+Requires:	ORBit2-devel >= 2.8.2
+Requires:	libIDL-devel >= 0.8.2
 
 %description
 Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
@@ -64,7 +63,6 @@ konsolidowanych statycznie programów u¿ywaj±cych technologii CORBA.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure
