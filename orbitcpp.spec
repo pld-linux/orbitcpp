@@ -1,7 +1,7 @@
 Summary:	C++ bindings for the ORBit Corba ORB
 Summary(pl):	Powi±zania C++ dla ORBit Corba ORB
 Name:		orbitcpp
-Version:	1.3.4
+Version:	1.3.5
 Release:	1
 License:	GPL
 Group:		Applications/Engineering
@@ -10,11 +10,10 @@ URL:		http://orbitcpp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	ORBit2-devel >= 2.5.
+BuildRequires:	ORBit2-devel >= 2.5.0
 BuildRequires:	libIDL >= 0.7.4
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB
