@@ -59,8 +59,8 @@ statically linked that use CORBA technology.
 Orbitcpp to projekt umo¿liwiaj±cy tworzenie powi±zañ C++ dla ORBit
 Corba ORB.
 
-Ten Pakiet zawiera biblioteki statyczne potrzebne do pisania programów
-zlinkowanych statycznie u¿ywaj±cych technologii CORBA.
+Ten Pakiet zawiera biblioteki statyczne potrzebne do pisania
+konsolidowanych statycznie programów u¿ywaj±cych technologii CORBA.
 
 %prep
 %setup -q
