@@ -16,19 +16,19 @@ BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB
+Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
 
 %description -l pl
 Orbitcpp to projekt umo¿liwiaj±cy tworzenie powi±zañ C++ dla ORBit
-Corba ORB
+Corba ORB.
 
 %package devel
 Summary:	Header files, and utilities for orbitcpp
 Summary(pl):	Pliki nag³ówkowe i u¿ytki dla orbitcpp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	ORBit2-devel
-Requires:	libIDL-devel
+Requires:	ORBit2-devel >= 2.7.6
+Requires:	libIDL-devel >= 0.7.4
 
 %description
 Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
@@ -76,6 +76,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# not needed for ORBit2 backends
+rm -f $RPM_BUILD_ROOT%{_libdir}/orbit-2.0/idl-backends/*.{a,la}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -83,18 +86,17 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
-%{_libdir}/orbit-2.0/idl-backends/*.la
-%{_libdir}/orbit-2.0/idl-backends/*.so*
+%dir %{_libdir}/orbit-2.0/idl-backends
+%attr(755,root,root) %{_libdir}/orbit-2.0/idl-backends/*.so*
 
 %files devel
 %defattr(644,root,root,755)
 %doc ChangeLog
-%{_libdir}/lib*.la
 %attr(755,root,root) %{_libdir}/lib*.so
-%{_pkgconfigdir}/*.pc
+%{_libdir}/lib*.la
 %{_includedir}/orbitcpp-*
+%{_pkgconfigdir}/*.pc
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libORBit-2-cpp.a
-%{_libdir}/orbit-2.0/idl-backends/*.a
