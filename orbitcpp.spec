@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Engineering
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/orbitcpp/1.3/%{name}-%{version}.tar.bz2
+# Source0-md5:	cc8f2c687fd44b04c361fbd3c50a1aef
 URL:		http://orbitcpp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
