@@ -2,16 +2,17 @@ Summary:	C++ bindings for the ORBit Corba ORB
 Summary(pl):	Powi±zania C++ dla ORBit Corba ORB
 Name:		orbitcpp
 Version:	1.3.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Engineering
 Source0:	ftp://ftp.gnome.org/pub/gnome/sources/orbitcpp/1.3/%{name}-%{version}.tar.bz2
 # Source0-md5:	5dbfd25232aa3b079ffbee9fd5641348
+Patch0:		%{name}-gcc33.patch
 URL:		http://orbitcpp.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
-BuildRequires:	ORBit2-devel >= 2.5.0
+BuildRequires:	ORBit2-devel >= 2.7.5-1
 BuildRequires:	libIDL >= 0.7.4
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -65,6 +66,7 @@ zlinkowanych statycznie u¿ywaj±cych technologii CORBA.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 %configure
