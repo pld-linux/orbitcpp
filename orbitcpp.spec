@@ -12,6 +12,7 @@ BuildRequires:	ORBit2-devel >= 1:2.8.2
 BuildRequires:	autoconf >= 2.12
 BuildRequires:	automake
 BuildRequires:	libIDL-devel >= 0.8.2
+BuildRequires:	libstdc++-devel
 BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +31,7 @@ Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	ORBit2-devel >= 1:2.8.2
 Requires:	libIDL-devel >= 0.8.2
+Requires:	libstdc++-devel
 
 %description
 Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
