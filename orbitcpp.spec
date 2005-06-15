@@ -1,3 +1,4 @@
+%bcond_without	static	# don't build static library
 Summary:	C++ bindings for the ORBit Corba ORB
 Summary(pl):	Powi±zania C++ dla ORBit Corba ORB
 Name:		orbitcpp
@@ -75,7 +76,8 @@ konsolidowanych statycznie programów u¿ywaj±cych technologii CORBA.
 %{__autoheader}
 # -i is workaround for am problems in tests
 %{__automake} -i
-%configure
+%configure \
+	%{!?with_static:--disable-static}
 %{__make}
 
 %install
@@ -105,6 +107,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/orbitcpp-*
 %{_pkgconfigdir}/*.pc
 
+%if %{with static}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/lib*.a
+%endif
