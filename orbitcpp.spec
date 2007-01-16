@@ -36,7 +36,7 @@ Requires:	ORBit2-devel >= 1:2.8.2
 Requires:	libIDL-devel >= 0.8.2
 Requires:	libstdc++-devel
 
-%description
+%description devel
 Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
 
 This package includes the header files and utilities neecessary to
