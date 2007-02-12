@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	C++ bindings for the ORBit Corba ORB
-Summary(pl):	Powi±zania C++ dla ORBit Corba ORB
+Summary(pl.UTF-8):   PowiÄ…zania C++ dla ORBit Corba ORB
 Name:		orbitcpp
 Version:	1.3.9
 Release:	1
@@ -23,13 +23,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
 
-%description -l pl
-Orbitcpp to projekt umo¿liwiaj±cy tworzenie powi±zañ C++ dla ORBit
+%description -l pl.UTF-8
+Orbitcpp to projekt umoÅ¼liwiajÄ…cy tworzenie powiÄ…zaÅ„ C++ dla ORBit
 Corba ORB.
 
 %package devel
 Summary:	Header files and utilities for orbitcpp
-Summary(pl):	Pliki nag³ówkowe i u¿ytki dla orbitcpp
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i uÅ¼ytki dla orbitcpp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	ORBit2-devel >= 1:2.8.2
@@ -42,16 +42,16 @@ Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
 This package includes the header files and utilities neecessary to
 write programs that use orbitcpp.
 
-%description devel -l pl
-Orbitcpp to projekt umo¿liwiaj±cy tworzenie powi±zañ C++ dla ORBit
+%description devel -l pl.UTF-8
+Orbitcpp to projekt umoÅ¼liwiajÄ…cy tworzenie powiÄ…zaÅ„ C++ dla ORBit
 Corba ORB.
 
-Ten pakiet zawiera pliki nag³ówkowe oraz u¿ytki potrzebne do pisania
-programów u¿ywaj±cych orbitcpp.
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe oraz uÅ¼ytki potrzebne do pisania
+programÃ³w uÅ¼ywajÄ…cych orbitcpp.
 
 %package static
 Summary:	Static orbitcpp library
-Summary(pl):	Statyczna biblioteka orbitcpp
+Summary(pl.UTF-8):   Statyczna biblioteka orbitcpp
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
@@ -61,12 +61,12 @@ Orbitcpp is a project to develop C++ bindings for the ORBit Corba ORB.
 This package includes static library neecessary to write programs
 statically linked that use CORBA technology.
 
-%description static -l pl
-Orbitcpp to projekt umo¿liwiaj±cy tworzenie powi±zañ C++ dla ORBit
+%description static -l pl.UTF-8
+Orbitcpp to projekt umoÅ¼liwiajÄ…cy tworzenie powiÄ…zaÅ„ C++ dla ORBit
 Corba ORB.
 
-Ten pakiet zawiera bibliotekê statyczn± potrzebn± do pisania
-konsolidowanych statycznie programów u¿ywaj±cych technologii CORBA.
+Ten pakiet zawiera bibliotekÄ™ statycznÄ… potrzebnÄ… do pisania
+konsolidowanych statycznie programÃ³w uÅ¼ywajÄ…cych technologii CORBA.
 
 %prep
 %setup -q
