@@ -2,7 +2,7 @@
 %bcond_without	static_libs	# don't build static library
 #
 Summary:	C++ bindings for the ORBit Corba ORB
-Summary(pl.UTF-8):   Powiązania C++ dla ORBit Corba ORB
+Summary(pl.UTF-8):	Powiązania C++ dla ORBit Corba ORB
 Name:		orbitcpp
 Version:	1.3.9
 Release:	1
@@ -29,7 +29,7 @@ Corba ORB.
 
 %package devel
 Summary:	Header files and utilities for orbitcpp
-Summary(pl.UTF-8):   Pliki nagłówkowe i użytki dla orbitcpp
+Summary(pl.UTF-8):	Pliki nagłówkowe i użytki dla orbitcpp
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	ORBit2-devel >= 1:2.8.2
@@ -51,7 +51,7 @@ programów używających orbitcpp.
 
 %package static
 Summary:	Static orbitcpp library
-Summary(pl.UTF-8):   Statyczna biblioteka orbitcpp
+Summary(pl.UTF-8):	Statyczna biblioteka orbitcpp
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
