@@ -7,9 +7,9 @@ Summary(pl.UTF-8):	Powiązania C++ dla ORBit Corba ORB
 Name:		orbitcpp
 Version:	1.3.9
 Release:	2
-License:	GPL
+License:	LGPL v2+
 Group:		Applications/Engineering
-Source0:	ftp://ftp.gnome.org/pub/gnome/sources/orbitcpp/1.3/%{name}-%{version}.tar.bz2
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/orbitcpp/1.3/%{name}-%{version}.tar.bz2
 # Source0-md5:	ef1594819cf62fc2dad6e0a1cc4cb578
 URL:		http://orbitcpp.sourceforge.net/
 BuildRequires:	ORBit2-devel >= 1:2.8.2
